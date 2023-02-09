@@ -5,7 +5,7 @@ import string
 def generate_csv():
     """Generates a CSV with random data."""
 
-    filename = "random_data.csv"
+    filename = input("Enter the filename: ").replace(" ", "_").replace(",", "_") + ".csv"
 
     with open(filename, "w", newline="") as file:
         writer = csv.writer(file)
