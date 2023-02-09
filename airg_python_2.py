@@ -38,15 +38,15 @@ def generate_csv(filename, total_rows, chunk_size):
 def execute_script():
     """Executes all the required elements of the script."""
 
-    if __name__ == '__main__':
-        filename = input("Enter the filename: ")
-        total_rows = int(input("Enter the number of rows to generate: "))
-        chunk_size = int(input("Enter the chunk size: "))
+    filename = input("Enter the filename: ")
+    total_rows = int(input("Enter the number of rows to generate: "))
+    chunk_size = int(input("Enter the chunk size: "))
 
-        print(generate_csv(
-            filename=filename,
-            total_rows=total_rows,
-            chunk_size=chunk_size
-        ))
+    print(generate_csv(
+        filename=filename,
+        total_rows=total_rows,
+        chunk_size=chunk_size
+    ))
 
-execute_script()
+if __name__ == '__main__':
+    execute_script()
