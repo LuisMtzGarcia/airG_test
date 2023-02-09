@@ -32,15 +32,21 @@ def generate_csv(filename, total_rows, chunk_size):
                 rows = future.result()
                 writer.writerows(rows)
     
-    print(f"CSV file with random data has been generated and saved as {filename}")
+    return f"CSV file with random data has been generated and saved as {filename}"
 
 
-filename = input("Enter the filename: ")
-total_rows = int(input("Enter the number of rows to generate: "))
-chunk_size = int(input("Enter the chunk size: "))
+def execute_script():
+    """Executes all the required elements of the script."""
 
-generate_csv(
-    filename=filename,
-    total_rows=total_rows,
-    chunk_size=chunk_size
-)
+    if __name__ == '__main__':
+        filename = input("Enter the filename: ")
+        total_rows = int(input("Enter the number of rows to generate: "))
+        chunk_size = int(input("Enter the chunk size: "))
+
+        print(generate_csv(
+            filename=filename,
+            total_rows=total_rows,
+            chunk_size=chunk_size
+        ))
+
+execute_script()
